@@ -6,6 +6,7 @@ bot.on('ready' ,() =>{
 })
 
 bot.on('message', msg=>{
+    if (msg.author.id == bot.author.id) {return;}
     if(msg.content.includes("pie") && msg.content.includes("furry"))
     {
         msg.channel.send('furry.');
@@ -22,7 +23,7 @@ bot.on('message', msg=>{
     {
         msg.channel.send('ur mom lol')
     }
-    if(msg.content.includes("MMonkey"))
+    if(msg.content.includes("MMonkey") )
     {
         msg.channel.send("*monkey sounds*")
     }
