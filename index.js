@@ -8,11 +8,11 @@ bot.on('ready' ,() =>{
 bot.on('message', msg=>{
     if (msg.author.id == bot.user.id) {return;}
     msg = msg.content.toLowerCase();
-    if(msg.content.includes("pie") && msg.content.includes("furry"))
+    if(msg.includes("pie") && msg.includes("furry"))
     {
         msg.channel.send('furry.');
     }
-    if(msg.content.includes("salami"))
+    if(msg.includes("salami"))
     {
         msg.channel.send('aint gonna fit (wont fit) https://cdn.discordapp.com/attachments/544377900678381569/735086178344239104/video0.mp4')
     }
