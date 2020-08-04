@@ -22,7 +22,7 @@ bot.on('message', msg=>{
     {
         msg.channel.send('ur mom lol')
     }
-    if(msg.content.includes("monkey"))
+    if(msg.content.includes("MMonkey"))
     {
         msg.channel.send("*monkey sounds*")
     }
