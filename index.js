@@ -5,9 +5,9 @@ bot.on('ready' ,() =>{
     console.log('The bot is Online');
 })
 
-bot.on('message', message=>{
+bot.on('message', mssage=>{
     if (msg.author.id == bot.user.id) {return;}
-    msg = message.content.toLowerCase();
+    msg = mssage.content.toLowerCase();
     if(msg.includes("pie") && msg.includes("furry"))
     {
         msg.channel.send('furry.');
