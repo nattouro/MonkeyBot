@@ -6,7 +6,7 @@ bot.on('ready' ,() =>{
 })
 
 bot.on('message', msg=>{
-    if(msg.content.includes(" pie ", "furry"))
+    if(msg.content.includes(" pie " && "furry"))
     {
         msg.reply('furry');
     }
