@@ -8,7 +8,7 @@ bot.on('ready' ,() =>{
 bot.on('message', msg=>{
     if(msg.content.includes("pie") && msg.content.includes("furry"))
     {
-        msg.channel.send('furry');
+        msg.channel.send('furry.');
     }
     if(msg.content.includes("salami"))
     {
