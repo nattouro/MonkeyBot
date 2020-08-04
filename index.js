@@ -7,6 +7,7 @@ bot.on('ready' ,() =>{
 
 bot.on('message', msg=>{
     if (msg.author.id == bot.user.id) {return;}
+    msg = msg.content.toLowerCase();
     if(msg.content.includes("pie") && msg.content.includes("furry"))
     {
         msg.channel.send('furry.');
