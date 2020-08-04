@@ -8,19 +8,19 @@ bot.on('ready' ,() =>{
 bot.on('message', msg=>{
     if(msg.content.includes("pie") && msg.content.includes("furry"))
     {
-        msg.reply('furry');
+        msg.channel.send('furry');
     }
     if(msg.content.includes("salami"))
     {
-        msg.reply('aint gonna fit (wont fit) https://cdn.discordapp.com/attachments/544377900678381569/735086178344239104/video0.mp4')
+        msg.channel.send('aint gonna fit (wont fit) https://cdn.discordapp.com/attachments/544377900678381569/735086178344239104/video0.mp4')
     }
     if(msg.content.includes("banana"))
     {
-        msg.reply('OOO OOO AAA AA AA BANANAA OOO OO')
+        msg.channel.send('OOO OOO AAA AA AA BANANAA OOO OO')
     }
     if(msg.content.includes("why"))
     {
-        msg.reply('ur mom lol')
+        msg.channel.send('ur mom lol')
     }
 })
 
