@@ -21,7 +21,7 @@ bot.on('message', msg=>{
     }
     if(msg.content.includes("why"))
     {
-        msg.channel.send('ur sister lol')
+        msg.channel.send('ur sisterk lol')
     }
     if(msg.content.includes("monkey") )
     {
