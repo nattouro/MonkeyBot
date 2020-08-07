@@ -27,6 +27,14 @@ bot.on('message', msg=>{
     {
         msg.channel.send("*monkey sounds*")
     }
+    if(msg.content.startsWith("monkey, kick pie"))
+    {
+        const userID = "238825126408355842"
+        const guild = message.guild
+        const member = guild.member(userID)
+        msg.channel.send("kicked :monkey:")
+        return member.kick()
+    }
 })
 
 bot.login(process.env.token);
