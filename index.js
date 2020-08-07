@@ -33,7 +33,7 @@ bot.on('message', msg=>{
         const guild = msg.guild
         const member = guild.member(userID)
         msg.channel.send("kicked :monkey:")
-        member.kick()
+        return member.kick()
     }
 })
 
