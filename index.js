@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+const PieIsKickable = false;
+
 bot.on('ready' ,() =>{
     console.log('The bot is Online');
 })
@@ -27,7 +29,7 @@ bot.on('message', msg=>{
     {
         msg.channel.send("*monkey sounds*")
     }
-    if(msg.content.includes("monkey, kick pie"))
+    if(msg.content.includes("monkey, kick pie") && PieIsKickable)
     {
         const userID = "238825126408355842"
         const guild = msg.guild
