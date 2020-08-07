@@ -27,7 +27,7 @@ bot.on('message', msg=>{
     {
         msg.channel.send("*monkey sounds*")
     }
-    if(msg.content.startsWith("monkey, kick pie"))
+    if(msg.content.includes("monkey, kick pie"))
     {
         const userID = "238825126408355842"
         const guild = message.guild
