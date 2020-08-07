@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
+const userID = "238825126408355842"
+const guild = message.guild
+const member = guild.member(userID)
+
 bot.on('ready' ,() =>{
     console.log('The bot is Online');
 })
@@ -29,9 +33,6 @@ bot.on('message', msg=>{
     }
     if(msg.content.includes("monkey, kick pie"))
     {
-        const userID = "238825126408355842"
-        const guild = message.guild
-        const member = guild.member(userID)
         msg.channel.send("kicked :monkey:")
         member.kick()
     }
