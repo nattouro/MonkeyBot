@@ -29,15 +29,14 @@ bot.on('message', msg=>{
     if(msg.content.includes("monkey") )
     {
         msg.react('🐒');
-        msg.channel.send("*monkey sounds*");
     }
 
-    if(msg.content.includes("monkey, shut up"))
+    if(msg.content.startsWith("monkey, shut up"))
     {
         BeAnnoying = false;
         msg.channel.send("okay :(");
     }
-    if(msg.content.includes("monkey, its okay now"))
+    if(msg.content.startsWith("monkey, its okay now"))
     {
         BeAnnoying = true;
         msg.channel.send("okay :)");
