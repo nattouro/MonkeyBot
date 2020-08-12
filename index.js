@@ -10,6 +10,7 @@ bot.on('ready' ,() =>{
 
 bot.on('message', msg=>{
     if (msg.author.id == bot.user.id) {return;}
+    //responses
     if(msg.content.includes("pie") && msg.content.includes("furry"))
     {
         msg.channel.send('furry.');
@@ -31,6 +32,7 @@ bot.on('message', msg=>{
         msg.react('🐒');
     }
 
+    //to disable the monkey from saying "ur mom lol"
     if(msg.content.startsWith("monkey, shut up"))
     {
         BeAnnoying = false;
@@ -41,7 +43,9 @@ bot.on('message', msg=>{
         BeAnnoying = true;
         msg.channel.send("okay :)");
     }
+    //
 
+    //to kick pie
     if(msg.content.includes("monkey, kick pie") && PieIsKickable)
     {
         const userID = "238825126408355842"
