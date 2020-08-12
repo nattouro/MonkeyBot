@@ -28,8 +28,21 @@ bot.on('message', msg=>{
     }
     if(msg.content.includes("monkey") )
     {
-        msg.channel.send("*monkey sounds*")
+        msg.react('🐒');
+        msg.channel.send("*monkey sounds*");
     }
+
+    if(msg.content.includes("monkey, shut up"))
+    {
+        BeAnnoying = false;
+        msg.channel.send("okay :(");
+    }
+    if(msg.content.includes("monkey, its okay now"))
+    {
+        BeAnnoying = true;
+        msg.channel.send("okay :)");
+    }
+
     if(msg.content.includes("monkey, kick pie") && PieIsKickable)
     {
         const userID = "238825126408355842"
@@ -37,16 +50,6 @@ bot.on('message', msg=>{
         const member = guild.member(userID)
         msg.channel.send("kicked :monkey:")
         return member.kick()
-    }
-    if(msg.content.includes("monkey, shut up"))
-    {
-        BeAnnoying = false
-        msg.channel.send("okay :(")
-    }
-    if(msg.content.includes("monkey, its okay now"))
-    {
-        BeAnnoying = true
-        msg.channel.send("okay :)")
     }
 })
 
