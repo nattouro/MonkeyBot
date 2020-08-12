@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 const PieIsKickable = false;
-const BeAnnoying = true;
+var BeAnnoying = true;
 
 bot.on('ready' ,() =>{
     console.log('The bot is Online');
