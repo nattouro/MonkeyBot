@@ -32,7 +32,7 @@ bot.on('message', msg=>{
         msg.react('🐒');
     }
 
-    //to disable the monkey from saying "ur mom lol"
+    //to disable the monkey from saying "ur mom/sister lol"
     if(msg.content.startsWith("monkey, shut up"))
     {
         BeAnnoying = false;
