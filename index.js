@@ -38,12 +38,12 @@ bot.on('message', msg=>{
         msg.channel.send("kicked :monkey:")
         return member.kick()
     }
-    if(msg.content.startsWith("monkey, shut up"))
+    if(msg.content.includes("monkey, shut up"))
     {
         BeAnnoying = false
         msg.channel.send("okay :(")
     }
-    if(msg.content.startsWith("monkey, its okay now"))
+    if(msg.content.includes("monkey, its okay now"))
     {
         BeAnnoying = true
         msg.channel.send("okay :)")
