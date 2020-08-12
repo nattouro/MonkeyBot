@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 
 const PieIsKickable = false;
+const BeAnnoying = true;
 
 bot.on('ready' ,() =>{
     console.log('The bot is Online');
@@ -21,7 +22,7 @@ bot.on('message', msg=>{
     {
         msg.channel.send('OOO OOO AAA AA AA BANANAA OOO OO')
     }
-    if(msg.content.includes("why"))
+    if(msg.content.includes("why") && BeAnnoying)
     {
         msg.channel.send('ur sister lol')
     }
@@ -36,6 +37,16 @@ bot.on('message', msg=>{
         const member = guild.member(userID)
         msg.channel.send("kicked :monkey:")
         return member.kick()
+    }
+    if(msg.content.startsWith("monkey, shut up"))
+    {
+        BeAnnoying = false
+        msg.channel.send("okay :(")
+    }
+    if(msg.content.startsWith("monkey, its okay now"))
+    {
+        BeAnnoying = true
+        msg.channel.send("okay :)")
     }
 })
 
