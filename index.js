@@ -51,10 +51,12 @@ bot.on('message', msg=>{
         if(PieIsKickable)
         {
             PieIsKickable = false
+            msg.channel.send("🐒 Disabled")
         }
         else if (!PieIsKickable)
         {
             PieIsKickable = true
+            msg.channel.send("🐒 Enabled")
         }
     }
 
