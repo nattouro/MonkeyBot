@@ -3,6 +3,7 @@ const bot = new Discord.Client();
 
 const PieIsKickable = true;
 var BeAnnoying = true;
+const authorID = "211629886081728512";
 
 bot.on('ready' ,() =>{
     console.log('The bot is Online');
@@ -44,6 +45,18 @@ bot.on('message', msg=>{
         msg.channel.send("okay :)");
     }
     //
+
+    if(msg.content.startsWith("toggle pieiskickable") && msg.author.id == authorID)
+    {
+        if(PieIsKickable)
+        {
+            PieIsKickable = false
+        }
+        else if (!PieIsKickable)
+        {
+            PieIsKickable = true
+        }
+    }
 
     //to kick pie
     if(msg.content.startsWith("monkey, kick pie") && PieIsKickable)
