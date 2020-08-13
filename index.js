@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const PieIsKickable = true;
+var PieIsKickable = true;
 var BeAnnoying = true;
 const authorID = "211629886081728512";
 
@@ -28,7 +28,7 @@ bot.on('message', msg=>{
     {
         msg.channel.send('ur sister lol')
     }
-    if(msg.content.includes("monkey") )
+    if(msg.content.includes("monkey"))
     {
         msg.react('🐒')
     }
