@@ -14,7 +14,7 @@ bot.on('message', msg=>{
     //responses
     if(msg.content.includes("pie") && msg.content.includes("furry"))
     {
-        msg.channel.send('furry.');
+        msg.channel.send('furry.')
     }
     if(msg.content.includes("salami"))
     {
@@ -30,19 +30,19 @@ bot.on('message', msg=>{
     }
     if(msg.content.includes("monkey") )
     {
-        msg.react('🐒');
+        msg.react('🐒')
     }
 
     //to disable the monkey from saying "ur mom/sister lol"
     if(msg.content.startsWith("monkey, shut up"))
     {
-        BeAnnoying = false;
-        msg.channel.send("okay :(");
+        BeAnnoying = false
+        msg.channel.send("okay :(")
     }
     if(msg.content.startsWith("monkey, its okay now"))
     {
-        BeAnnoying = true;
-        msg.channel.send("okay :)");
+        BeAnnoying = true
+        msg.channel.send("okay :)")
     }
     //
 
@@ -50,13 +50,13 @@ bot.on('message', msg=>{
     {
         if(PieIsKickable)
         {
-            PieIsKickable = false;
-            msg.channel.send("🐒 Disabled");
+            PieIsKickable = false
+            msg.channel.send("🐒 Disabled")
         }
         else if (!PieIsKickable)
         {
-            PieIsKickable = true;
-            msg.channel.send("🐒 Enabled");
+            PieIsKickable = true
+            msg.channel.send("🐒 Enabled")
         }
     }
 
