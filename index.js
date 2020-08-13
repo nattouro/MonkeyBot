@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const PieIsKickable = false;
+const PieIsKickable = true;
 var BeAnnoying = true;
 
 bot.on('ready' ,() =>{
@@ -46,7 +46,7 @@ bot.on('message', msg=>{
     //
 
     //to kick pie
-    if(msg.content.includes("monkey, kick pie") && PieIsKickable)
+    if(msg.content.startsWith("monkey, kick pie") && PieIsKickable)
     {
         const userID = "238825126408355842"
         const guild = msg.guild
