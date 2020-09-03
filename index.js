@@ -12,7 +12,7 @@ bot.on('ready' ,() =>{
 bot.on('message', msg=>{
     if (msg.author.id == bot.user.id) {return;}
     //responses
-    if(msg.content.includes("pie") && msg.content.includes("furry"))
+    if(msg.content.includes("pie") && msg.content.includes("furry") && BeAnnoying)
     {
         msg.channel.send('furry.')
     }
@@ -20,7 +20,7 @@ bot.on('message', msg=>{
     {
         msg.channel.send('aint gonna fit (wont fit) https://cdn.discordapp.com/attachments/544377900678381569/735086178344239104/video0.mp4')
     }
-    if(msg.content.includes("banana"))
+    if(msg.content.includes("banana") && BeAnnoying)
     {
         msg.channel.send('OOO OOO AAA AA AA BANANAA OOO OO')
     }
@@ -46,6 +46,7 @@ bot.on('message', msg=>{
     }
     //
 
+    // Toggle if kicking pie is available (only i can toggle it)
     if(msg.content.startsWith("toggle pieiskickable") && msg.author.id == authorID)
     {
         if(PieIsKickable)
