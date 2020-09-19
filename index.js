@@ -27,7 +27,7 @@ bot.on('message', msg=>{
     }
     if(msg.content.includes("why") && BeAnnoying)
     {
-        msg.channel.send(AnnoyingResponses[Math.random() * 5])
+        msg.channel.send(AnnoyingResponses[1])
     }
     if(msg.content.includes("monkey"))
     {
