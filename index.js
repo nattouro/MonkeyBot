@@ -3,6 +3,7 @@ const bot = new Discord.Client();
 
 var PieIsKickable = true;
 var BeAnnoying = true;
+var AnnoyingMessage;
 var AnnoyingResponses = ["ur sister lol", "ur mom lol", "ur dad lol", "ur brother lol", "my mom lol"];
 const authorID = "211629886081728512";
 
@@ -27,11 +28,20 @@ bot.on('message', msg=>{
     }
     if(msg.content.includes("why") && BeAnnoying)
     {
-        msg.channel.send(AnnoyingResponses[Math.floor(Math.random() * 5)])
+        AnnoyingMessage = await msg.channel.send(AnnoyingResponses[Math.floor(Math.random() * 5)])
+        
+        setTimeout(() => {
+            DeleteAnnoyingMessage()
+        }, 5);
     }
     if(msg.content.includes("monkey"))
     {
         msg.react('🐒')
+    }
+
+    function DeleteAnnoyingMessage()
+    {
+        msg.delete
     }
 
     //to disable the monkey from saying "ur mom/sister lol"
