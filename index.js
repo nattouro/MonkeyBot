@@ -28,9 +28,7 @@ bot.on('message', msg=>{
     }
     if(msg.content.includes("why") && BeAnnoying)
     {
-        AnnoyingMessage = msg.channel.send(AnnoyingResponses[Math.floor(Math.random() * 5)])
-        
-        setTimeout(DeleteAnnoyingMessage(), 5)
+        AnnoyingMessage = msg.channel.send(AnnoyingResponses[Math.floor(Math.random() * 5)]).then(setTimeout(DeleteAnnoyingMessage(), 5))
     }
     if(msg.content.includes("monkey"))
     {
