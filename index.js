@@ -30,9 +30,7 @@ bot.on('message', msg=>{
     {
         AnnoyingMessage = await msg.channel.send(AnnoyingResponses[Math.floor(Math.random() * 5)])
         
-        setTimeout(() => {
-            DeleteAnnoyingMessage()
-        }, 5);
+        setTimeout(DeleteAnnoyingMessage(), 5)
     }
     if(msg.content.includes("monkey"))
     {
