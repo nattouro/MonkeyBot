@@ -39,7 +39,7 @@ bot.on('message', msg=>{
     {
         StoredMessage = msg.content;
         msg.channel.send(StoredMessage.replace("Msay", ""));
-        msg.delete;
+        msg.delete(msg);
     }
 
     //to disable the monkey from saying "ur mom/sister lol"
