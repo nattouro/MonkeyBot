@@ -35,7 +35,7 @@ bot.on('message', msg=>{
     {
         msg.react('🐒')
     }
-    if(msg.startsWith("Msay"))
+    if(msg.content.startsWith("Msay"))
     {
         StoredMessage = msg.content;
         msg.channel.send(StoredMessage.replace("Msay", ""));
