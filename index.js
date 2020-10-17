@@ -5,6 +5,7 @@ var PieIsKickable = false;
 var BeAnnoying = true;
 var AnnoyingMessage;
 var AnnoyingResponses = ["ur sister lol", "ur mom lol", "ur dad lol", "ur brother lol", "my mom lol"];
+var StoredMessage;
 const authorID = "211629886081728512";
 
 bot.on('ready' ,() =>{
@@ -33,6 +34,11 @@ bot.on('message', msg=>{
     if(msg.content.includes("monkey"))
     {
         msg.react('🐒')
+    }
+    if(msg.startsWith("Msay"))
+    {
+        StoredMessage = msg.content;
+        msg.channel.send(StoredMessage.replace("Msay", ""));
     }
 
     //to disable the monkey from saying "ur mom/sister lol"
