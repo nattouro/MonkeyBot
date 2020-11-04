@@ -29,10 +29,16 @@ bot.on('message', msg=>{
     }
     if(msg.content.includes("why") && BeAnnoying)
     {
+        SendandDelete();
+    }
+
+    async function SendandDelete()
+    {
         const SentYMessage = await msg.channel.send(AnnoyingResponses[Math.floor(Math.random() * 5)]);
 
         SentYMessage.delete({ timeout: 5000 });
     }
+
     if(msg.content.includes("monkey"))
     {
         msg.react('🐒')
