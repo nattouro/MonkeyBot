@@ -45,9 +45,14 @@ bot.on('message', msg=>{
     }
     if(msg.content.startsWith("Msay"))
     {
+        SayandDelete();
+    }
+
+    async function SayandDelete()
+    {
         StoredMessage = msg.content;
-        msg.channel.send(StoredMessage.replace("Msay", ""));
-        msg.delete(msg);
+        const SendingMessage = msg.channel.send(StoredMessage.replace("Msay", ""));
+        SendingMessage.delete({ timeout: 100 });
     }
 
     //to disable or enable the monkey from saying "ur mom/sister lol"
