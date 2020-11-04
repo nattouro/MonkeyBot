@@ -51,7 +51,7 @@ bot.on('message', msg=>{
     async function SayandDelete()
     {
         StoredMessage = msg.content;
-        const SendingMessage = msg.channel.send(StoredMessage.replace("Msay", ""));
+        const SendingMessage = await msg.channel.send(StoredMessage.replace("Msay", ""));
         SendingMessage.delete({ timeout: 100 });
     }
 
