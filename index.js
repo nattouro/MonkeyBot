@@ -8,7 +8,7 @@ var AnnoyingResponses = ["ur sister lol", "ur mom lol", "ur dad lol", "ur brothe
 var StoredMessage;
 const authorID = "211629886081728512";
 
-bot.on('ready' ,() =>{
+bot.on('ready' ,async (first, last)=>{
     console.log('The bot is Online');
 })
 
@@ -29,7 +29,9 @@ bot.on('message', msg=>{
     }
     if(msg.content.includes("why") && BeAnnoying)
     {
-        msg.channel.send(AnnoyingResponses[Math.floor(Math.random() * 5)])
+        const SentYMessage = await msg.channel.send(AnnoyingResponses[Math.floor(Math.random() * 5)]);
+
+        SentYMessage.delete({ timeout: 5000 });
     }
     if(msg.content.includes("monkey"))
     {
@@ -42,7 +44,7 @@ bot.on('message', msg=>{
         msg.delete(msg);
     }
 
-    //to disable the monkey from saying "ur mom/sister lol"
+    //to disable or enable the monkey from saying "ur mom/sister lol"
     if(msg.content.startsWith("monkey, shut up"))
     {
         BeAnnoying = false
@@ -55,7 +57,7 @@ bot.on('message', msg=>{
     }
     //
 
-    // Toggle if kicking pie is available (only i can toggle it)
+    // Toggle if pie is kickable or not (only i can toggle it)
     if(msg.content.startsWith("toggle pieiskickable") && msg.author.id == authorID)
     {
         if(PieIsKickable)
@@ -73,11 +75,11 @@ bot.on('message', msg=>{
     //to kick pie
     if(msg.content.startsWith("monkey, kick pie") && PieIsKickable)
     {
-        const userID = "238825126408355842"
+        const PieID = "238825126408355842"
         const guild = msg.guild
-        const member = guild.member(userID)
+        const Pie = guild.member(PieID)
         msg.channel.send("kicked :monkey:")
-        return member.kick()
+        return Pie.kick()
     }
 })
 
