@@ -8,6 +8,7 @@ var BeAnnoying = true;
 var AnnoyingMessage;
 var AnnoyingResponses = ["ur sister lol", "ur mom lol", "ur dad lol", "ur brother lol", "my mom lol"];
 var StoredMessage;
+let MonkeFridayChannel;
 const authorID = "211629886081728512";
 
 bot.on('ready' ,async (first, last)=>{
@@ -39,7 +40,8 @@ bot.on('message', msg=>{
     }
     if(msg.content.startsWith("SetFridaysHere") && msg.author.id == authorID)
     {
-        let MonkeFridayChannel = msg.guild.channels.cache.get("id");
+        MonkeFridayChannel = msg.channel.id
+        MonkeFridayChannel = msg.guild.channels.cache.get(MonkeFridayChannel);
         console.log(MonkeFridayChannel);
     }
 
