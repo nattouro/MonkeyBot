@@ -36,7 +36,7 @@ bot.on('message', msg=>{
     }
     if(msg.content.startsWith("SetFridaysHere") && msg.author.id == authorID)
     {
-        MonkeFridayChannel = msg.channel.id;
+        MonkeFridayChannel = msg.guild.channels.cache.get("id");
     }
     if(msg.content.startsWith("testmonke"))
     {
