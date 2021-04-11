@@ -38,7 +38,7 @@ bot.on('message', msg=>{
     {
         MonkeFridayChannel = msg.guild.channels.cache.get("id");
         MonkeFridayChannel = bot.channels.cache.find(channel => channel.id === MonkeFridayChannel);
-        console.send("the channel has been set");
+        console.log("the channel has been set");
     }
     if(msg.content.startsWith("testmonke"))
     {
