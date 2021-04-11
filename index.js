@@ -36,7 +36,7 @@ bot.on('message', msg=>{
     }
     if(msg.content.startsWith("testmonke"))
     {
-        MonkeFridayChannel.send("hehe monke");
+        console.log(MonkeFridayChannel);
     }
     if(msg.content.startsWith("SetFridaysHere") && msg.author.id == authorID)
     {
