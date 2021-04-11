@@ -1,11 +1,14 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+const cron = require("node-cron");
+let shelljs = require("shelljs");
 
 var PieIsKickable = false;
 var BeAnnoying = true;
 var AnnoyingMessage;
 var AnnoyingResponses = ["ur sister lol", "ur mom lol", "ur dad lol", "ur brother lol", "my mom lol"];
 var StoredMessage;
+var MonkeFridayChannel;
 const authorID = "211629886081728512";
 
 bot.on('ready' ,async (first, last)=>{
@@ -30,6 +33,14 @@ bot.on('message', msg=>{
     if(msg.content.includes("why") && BeAnnoying)
     {
         SendandDelete();
+    }
+    if(msg.content.startsWith("SetFridaysHere") && msg.author.id == authorID)
+    {
+        MonkeFridayChannel = msg.channel.id;
+    }
+    if(msg.content.startsWith("testmonke"))
+    {
+        MonkeFridayChannel.send("hehe monke");
     }
 
     async function SendandDelete()
