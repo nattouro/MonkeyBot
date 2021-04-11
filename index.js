@@ -41,7 +41,7 @@ bot.on('message', msg=>{
     if(msg.content.startsWith("SetFridaysHere") && msg.author.id == authorID)
     {
         MonkeFridayChannel = msg.guild.channels.cache.get("id");
-        console.log("the channel has been set");
+        console.log(MonkeFridayChannel);
     }
 
     async function SendandDelete()
