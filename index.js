@@ -40,7 +40,7 @@ bot.on('message', msg=>{
     }
     if(msg.content.startsWith("SetFridaysHere") && msg.author.id == authorID)
     {
-        MonkeFridayChannel = msg.channel.id
+        MonkeFridayChannel = msg.channel.id;
         MonkeFridayChannel = msg.guild.channels.cache.get(MonkeFridayChannel);
         console.log(MonkeFridayChannel);
     }
