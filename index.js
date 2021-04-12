@@ -34,15 +34,19 @@ bot.on('message', msg=>{
     {
         SendandDelete();
     }
-    if(msg.content.startsWith("testmonke"))
+    if(msg.content.startsWith("EnableMonkeFridays"))
     {
-        MonkeFridayChannel.send("hehe monke");
+        cron.schedule("* * * * * *", function(){
+            console.log("e");
+            MonkeFridayChannel.send("ooo ooo aa aaa");
+        })
     }
-    if(msg.content.startsWith("SetFridaysHere") && msg.author.id == authorID)
+    if(msg.content.startsWith("SetFridaysHere"))
     {
         MonkeFridayChannel = msg.channel.id;
         MonkeFridayChannel = msg.guild.channels.cache.get(MonkeFridayChannel);
         console.log(MonkeFridayChannel);
+        msg.react('🐒');
     }
 
     async function SendandDelete()
