@@ -38,7 +38,7 @@ bot.on('message', msg=>{
     {
         cron.schedule("* * * * * *", function(){
             console.log("e");
-            MonkeFridayChannel.send("ooo ooo aa aaa");
+            MonkeFridayChannel.send("ooo ooo aa aa");
         })
     }
     if(msg.content.startsWith("SetFridaysHere"))
