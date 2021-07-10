@@ -34,7 +34,7 @@ bot.on('message', msg=>{
     {
         SendandDelete();
     }
-    if(msg.content.startsWith("EnableMonkeFridays"))
+    if(msg.content.startsWith("EnableMonkeFridays") || MonkeFridayChannel)
     {
         cron.schedule("1 * * * * *", function(){
             MonkeFridayChannel.send("https://cdn.discordapp.com/attachments/736211763380355082/831223815618560000/FunkyMonkeyFriday.mp4");
