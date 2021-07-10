@@ -1,3 +1,4 @@
+const { job } = require('cron');
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const cron = require("node-cron");
@@ -34,7 +35,7 @@ bot.on('message', msg=>{
     {
         SendandDelete();
     }
-    if(msg.content.startsWith("EnableMonkeFridays") || MonkeFridayChannel)
+    if(msg.content.startsWith("EnableMonkeFridays"))
     {
         cron.schedule("1 * * * * *", function(){
             MonkeFridayChannel.send("https://cdn.discordapp.com/attachments/736211763380355082/831223815618560000/FunkyMonkeyFriday.mp4");
